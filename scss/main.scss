@@ -17,16 +17,22 @@ body {
     font-family: $font-stack;
 }
 
-@mixin button-style{
+@mixin flexCenter($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin button-style {
     background: none;
     border-style: none;
 }
 
 nav {
+    @include flexCenter(space-between);
     width: auto;
     padding: 16px;
-    display: flex;
-    justify-content: space-between;
     color: $primary-text-color;
 
     p {
@@ -46,17 +52,14 @@ nav {
 }
 
 article {
+    @include flexCenter(space-around, center);
     color: $primary-text-color;
     width: auto;
     padding: 35px 70px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     column-gap: 15px;
 
     .impact-section {
-        display: flex;
-        flex-direction: column;
+        @include flexCenter(column);
         padding-top: 50px;
         gap: 25px;
     }
@@ -99,27 +102,23 @@ article {
 
     .icon-wishlist {
         width: 100%;
-        display: flex;
-        justify-content: flex-end;
+        @include flexCenter(flex-end);
         padding-bottom: 12px;
     }
 
-    h3{
+    h3 {
         padding-top: 25px;
         padding-left: 20px;
-
     }
 
-    p{
+    p {
         padding: 2px 20px 10px 20px;
     }
 
     .product-image {
+        @include flexCenter(center, center);
         width: 100%;
         height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
         img {
             width: auto;
@@ -145,12 +144,10 @@ section {
     }
 
     .card-section {
-        display: flex;
+        @include flexCenter(center, center);
         width: auto;
         height: auto;
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
         column-gap: 100px;
         row-gap: 80px;
     }
@@ -158,6 +155,7 @@ section {
 
     .section-healthcare {
         padding-bottom: 60px;
+
         h2 {
             font-weight: 300;
             padding-bottom: 60px;
@@ -187,6 +185,19 @@ section {
             stroke: $just-white;
         }
 
+    }
+}
+
+.about-us {
+    h2 {
+        font-weight: bold;
+        padding-bottom: 60px;
+    }
+
+    .mision-section {
+        p{
+            color: #FA9500;
+        }
     }
 }
 
