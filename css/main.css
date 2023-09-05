@@ -1,6 +1,10 @@
-body {
+* {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
   background-color: #FFEFE7;
   font-family: "IBM Plex Sans", sans-serif;
 }
@@ -13,16 +17,140 @@ nav {
   color: #7C6A0A;
 }
 nav p {
-  font-size: 2rem;
+  font-size: 1.5em;
   font-weight: 400;
   padding-left: 30px;
 }
 nav .icons {
   display: flex;
+  gap: 15px;
 }
 nav .icons button {
   background: none;
   border-style: none;
+}
+
+article {
+  color: #7C6A0A;
+  width: auto;
+  padding: 35px 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+article .impact-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  gap: 25px;
+}
+article h1 {
+  font-size: 3em;
+  padding: 0px;
+  margin: 0px;
+}
+article p {
+  font-size: 1.5em;
+}
+article button {
+  background: none;
+  border-style: none;
+  background-color: #FA9500;
+  width: 12vw;
+  padding: 20px;
+  border-radius: 35px;
+  color: #fff;
+  font-size: 1em;
+}
+article img {
+  width: 25vw;
+  border-radius: 19px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.product-card, section .section-furniture .product-card, section .section-healthcare .product-card {
+  width: 23vw;
+  height: 52vh;
+  padding: 20px;
+  border-radius: 8px;
+}
+.product-card .icon-wishlist, section .section-furniture .product-card .icon-wishlist, section .section-healthcare .product-card .icon-wishlist {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 12px;
+}
+.product-card h3, section .section-furniture .product-card h3, section .section-healthcare .product-card h3 {
+  padding-top: 25px;
+  padding-left: 20px;
+}
+.product-card p, section .section-furniture .product-card p, section .section-healthcare .product-card p {
+  padding: 2px 20px 10px 20px;
+}
+.product-card .product-image, section .section-furniture .product-card .product-image, section .section-healthcare .product-card .product-image {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-card .product-image img {
+  width: auto;
+  height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6.5px;
+}
+
+section {
+  width: 100%;
+  height: auto;
+  padding: 60px;
+}
+section h2 {
+  color: #7C6A0A;
+  font-size: 2em;
+}
+section button {
+  background: none;
+  border-style: none;
+}
+section .card-section {
+  display: flex;
+  width: auto;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
+  row-gap: 80px;
+}
+section .section-healthcare {
+  padding-bottom: 60px;
+}
+section .section-healthcare h2 {
+  font-weight: 300;
+  padding-bottom: 60px;
+}
+section .section-healthcare .product-card {
+  background-color: #FFDAC6;
+  color: #7C6A0A;
+}
+section .section-furniture h2 {
+  font-weight: 300;
+  padding-bottom: 60px;
+}
+section .section-furniture .product-card {
+  background-color: #BABD8D;
+  color: #fff;
+}
+section .section-furniture svg path {
+  stroke: #fff;
 }
 
 footer {
