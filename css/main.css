@@ -10,10 +10,12 @@ body {
 }
 
 nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: auto;
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
   color: #7C6A0A;
 }
 nav p {
@@ -31,12 +33,13 @@ nav .icons button {
 }
 
 article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   color: #7C6A0A;
   width: auto;
   padding: 35px 70px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   -moz-column-gap: 15px;
        column-gap: 15px;
 }
@@ -92,11 +95,11 @@ article img {
   padding: 2px 20px 10px 20px;
 }
 .product-card .product-image, section .section-furniture .product-card .product-image, section .section-healthcare .product-card .product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .product-card .product-image img {
   width: auto;
@@ -121,11 +124,11 @@ section button {
 }
 section .card-section {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: auto;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   -moz-column-gap: 100px;
        column-gap: 100px;
   row-gap: 80px;
@@ -151,6 +154,14 @@ section .section-furniture .product-card {
 }
 section .section-furniture svg path {
   stroke: #fff;
+}
+
+.about-us h2 {
+  font-weight: bold;
+  padding-bottom: 60px;
+}
+.about-us .mision-section {
+  background-color: #FA9500;
 }
 
 footer {

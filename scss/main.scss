@@ -30,7 +30,7 @@ body {
 }
 
 nav {
-    @include flexCenter(space-between);
+    @include flexCenter(row, space-between, center);
     width: auto;
     padding: 16px;
     color: $primary-text-color;
@@ -52,14 +52,14 @@ nav {
 }
 
 article {
-    @include flexCenter(space-around, center);
+    @include flexCenter(row, space-around, center);
     color: $primary-text-color;
     width: auto;
     padding: 35px 70px;
     column-gap: 15px;
 
     .impact-section {
-        @include flexCenter(column);
+        @include flexCenter(column, null, null);
         padding-top: 50px;
         gap: 25px;
     }
@@ -102,7 +102,7 @@ article {
 
     .icon-wishlist {
         width: 100%;
-        @include flexCenter(flex-end);
+        @include flexCenter(null, flex-end, null);
         padding-bottom: 12px;
     }
 
@@ -116,7 +116,7 @@ article {
     }
 
     .product-image {
-        @include flexCenter(center, center);
+        @include flexCenter(null, center, center);
         width: 100%;
         height: auto;
 
@@ -144,7 +144,7 @@ section {
     }
 
     .card-section {
-        @include flexCenter(center, center);
+        @include flexCenter(null, center, center);
         width: auto;
         height: auto;
         flex-wrap: wrap;
@@ -195,9 +195,7 @@ section {
     }
 
     .mision-section {
-        p{
-            color: #FA9500;
-        }
+        background-color: #FA9500;
     }
 }
 
