@@ -99,7 +99,7 @@ article img {
   justify-content: center;
 }
 .product-card .product-image img {
-  width: 18vw;
+  width: auto;
   height: 30vh;
   -o-object-fit: cover;
      object-fit: cover;
