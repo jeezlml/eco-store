@@ -10,10 +10,12 @@ body {
 }
 
 nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: auto;
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
   color: #7C6A0A;
 }
 nav p {
@@ -31,12 +33,13 @@ nav .icons button {
 }
 
 article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   color: #7C6A0A;
   width: auto;
   padding: 35px 70px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   -moz-column-gap: 15px;
        column-gap: 15px;
 }
@@ -84,7 +87,7 @@ article img {
   justify-content: flex-end;
   padding-bottom: 12px;
 }
-.product-card h3, section .section-furniture .product-card h3, section .section-healthcare .product-card h3 {
+.product-card h3, .product-card .container-maps p, .container-maps .product-card p, section .section-furniture .product-card h3, section .section-healthcare .product-card h3 {
   padding-top: 25px;
   padding-left: 20px;
 }
@@ -92,11 +95,11 @@ article img {
   padding: 2px 20px 10px 20px;
 }
 .product-card .product-image, section .section-furniture .product-card .product-image, section .section-healthcare .product-card .product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .product-card .product-image img {
   width: auto;
@@ -121,11 +124,11 @@ section button {
 }
 section .card-section {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: auto;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   -moz-column-gap: 100px;
        column-gap: 100px;
   row-gap: 80px;
@@ -143,7 +146,7 @@ section .section-healthcare .product-card {
 }
 section .section-furniture h2 {
   font-weight: 300;
-  padding-bottom: 60px;
+  padding-bottom: 45px;
 }
 section .section-furniture .product-card {
   background-color: #BABD8D;
@@ -153,8 +156,112 @@ section .section-furniture svg path {
   stroke: #fff;
 }
 
+.about-us h2 {
+  font-weight: bold;
+  padding-bottom: 8%;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.about-us .mision-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 10%;
+}
+.about-us .mision-section .earth, .about-us .mision-section .innovation {
+  width: 39vw;
+  display: flex;
+  gap: 40px;
+  color: #E86424;
+  font-size: 30px;
+  font-weight: 500;
+}
+.about-us .mision-section .earth p, .about-us .mision-section .innovation p {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.about-us .mision-section .earth img, .about-us .mision-section .innovation img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.container-gallery h2 {
+  font-weight: bold;
+  padding-bottom: 8%;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.container-gallery .gallery-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10%;
+}
+.container-gallery .gallery-img img {
+  display: flex;
+  width: 28vw;
+  height: 40vh;
+  -o-object-position: 5px 35%;
+     object-position: 5px 35%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+}
+.container-gallery .gallery-img img:hover {
+  transform: scale(1.1);
+}
+
+.container-maps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #E86424;
+}
+.container-maps h2 {
+  font-weight: bold;
+  padding-bottom: 8%;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.container-maps .maps {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.container-maps h3, .container-maps p {
+  font-size: 2.5em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.container-maps p {
+  font-size: 1.5em;
+}
+
 footer {
+  color: #fff;
   background-color: #FA9500;
   width: 100%;
-  height: 200px;
+  height: auto;
+  padding: 40px;
+}
+footer .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 40px;
 }/*# sourceMappingURL=main.css.map */

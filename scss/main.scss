@@ -29,8 +29,17 @@ body {
     border-style: none;
 }
 
+@mixin text-h2 {
+    font-weight: bold;
+    padding-bottom: 8%;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
 nav {
-    @include flexCenter(space-between);
+    @include flexCenter(row, space-between, center);
     width: auto;
     padding: 16px;
     color: $primary-text-color;
@@ -52,14 +61,14 @@ nav {
 }
 
 article {
-    @include flexCenter(space-around, center);
+    @include flexCenter(row, space-around, center);
     color: $primary-text-color;
     width: auto;
     padding: 35px 70px;
     column-gap: 15px;
 
     .impact-section {
-        @include flexCenter(column);
+        @include flexCenter(column, null, null);
         padding-top: 50px;
         gap: 25px;
     }
@@ -102,7 +111,7 @@ article {
 
     .icon-wishlist {
         width: 100%;
-        @include flexCenter(flex-end);
+        @include flexCenter(null, flex-end, null);
         padding-bottom: 12px;
     }
 
@@ -116,7 +125,7 @@ article {
     }
 
     .product-image {
-        @include flexCenter(center, center);
+        @include flexCenter(null, center, center);
         width: 100%;
         height: auto;
 
@@ -144,7 +153,7 @@ section {
     }
 
     .card-section {
-        @include flexCenter(center, center);
+        @include flexCenter(null, center, center);
         width: auto;
         height: auto;
         flex-wrap: wrap;
@@ -172,7 +181,7 @@ section {
     .section-furniture {
         h2 {
             font-weight: 300;
-            padding-bottom: 60px;
+            padding-bottom: 45px;
         }
 
         .product-card {
@@ -190,20 +199,104 @@ section {
 
 .about-us {
     h2 {
-        font-weight: bold;
-        padding-bottom: 60px;
+        @include text-h2()
     }
 
     .mision-section {
-        p{
-            color: #FA9500;
+        @include flexCenter(row, space-evenly, center);
+        padding-bottom: 10%;
+
+        .earth {
+            width: 39vw;
+            display: flex;
+            gap: 40px;
+            color: #E86424;
+            font-size: 30px;
+            font-weight: 500;
+
+            p {
+                display: flex;
+                align-items: center;
+                text-align: center;
+            }
+
+            img {
+                object-fit: contain;
+            }
+        }
+
+        .innovation {
+            @extend .earth;
+        }
+    }
+
+
+}
+
+.container-gallery {
+    h2 {
+        @include text-h2()
+    }
+
+    .gallery-img {
+        @include flexCenter(row, space-between, center);
+        padding-bottom: 10%;
+
+        img {
+            display: flex;
+            width: 28vw;
+            height: 40vh;
+            object-position: 5px 35%;
+            object-fit: cover;
+            border-radius: 18px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
         }
     }
 }
 
+.container-maps {
+    @include flexCenter(column, center, flex-start);
+    color: #E86424;
+
+    h2 {
+        @include text-h2()
+    }
+
+    .maps {
+        @include flexCenter(row, center, center);
+        padding-bottom: 50px;
+    }
+
+    h3 {
+        font-size: 2.5em;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    p {
+        font-size: 1.5em;
+        @extend h3
+    }
+
+
+}
+
 footer {
     $background-footer: #FA9500;
+    color: $just-white;
     background-color: $background-footer;
     width: 100%;
-    height: 200px;
+    height: auto;
+    padding: 40px;
+
+    .social-media {
+        @include flexCenter(row, center, center);
+        gap: 40px;
+        padding-bottom: 40px;
+    }
 }
